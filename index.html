@@ -4,26 +4,25 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <title>翠巒祭公式サイト</title>
-<link href="https://cdn.suiranfes.com/2017/suika/4.0.0-alpha.5/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preload" as="style" href="https://cdn.suiranfes.com/root/koishi/4.0.0-alpha.4/css/bootstrap.min.css">
+<link rel="preload" as="style" href="https://cdn.suiranfes.com/2017/icons/v1.1.1/thsicons.css" />
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
 <script type="text/javascript" src="https://cdn.suiranfes.com/2017/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.suiranfes.com/2017/tether/1.4.0/js/tether.min.js"></script>
-<script type="text/javascript" src="https://cdn.suiranfes.com/2017/suika/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.suiranfes.com/root/koishi/4.0.0-alpha.4/js/bootstrap.min.js"></script>
+<script>$('link[as = "style"]').attr('rel','stylesheet');</script>
 <style>
 
     #head {
-        min-height: 100vh;
+        min-height: 70vh;
         width: 100vw;
         background-color: #f0f0f0;
-        overflow: hidden;
+        display: flex;
+        padding-top: auto;
     }
 
     #headwrp {
-        margin: auto
-    }
-
-    #headscr {
-        margin-right: auto;
-        margin-left: auto;
+        margin: auto;
     }
 
     .text-bigger{
@@ -34,37 +33,48 @@
         font-weight: 200;
     }
 
+    .keep-all{
+        word-break: keep-all;
+    }
+
 </style>
 
 </head>
 <body>
 
-<div id="head">
+<div id="head" class="text-center">
     <div id="headwrp">
-        <h1>suiranfes.com</h1>
+        <h1><i class="icon-ths-takasakihs"></i> suiranfes.com</h1>
         <p class="lead"><small>群馬県立高崎高等学校 文化祭</small><br>「翠巒祭」公式サイト</p>
         <a href="https://2017.suiranfes.com/" class="btn btn-success">【最新】 2017年 第65回サイトへ</a>
     </div>
-
-    <p id="headscr">↓スクロール</p>
 </div>
 
 <div class="container py-3">
-
-<h2>音楽系部活動 演奏会のご案内</h2>
-<ul>
-    <li><b>2017/03/28(火) 吹奏楽部定期演奏会</b><br>
-        開演18:00~ <a>@群馬音楽センター</a><br>
-        前売券 <b>￥300-</b> ・ 当日券 <b>￥500-</b>
-    </li>
-</ul>
-
-<h2>過去の翠巒祭ホームページ</h2>
-    <p>
-        <a href="https://2016.suiranfes.com/index2.html" class="btn btn-link">2016年 第64回</a><br>
-        <a href="https://2015.suiranfes.com/index2.html" class="btn btn-link">2015年 第63回</a><br>
-        <a href="https://2014.suiranfes.com/index2.html" class="btn btn-link">2014年 第62回</a><br>
-    </p>
+    <div class="container py-5">
+        <h2 class="keep-all">音楽系部活動 演奏会のご案内</h2>
+        <dl class="pl-md-5">
+            <dd class="py-2">
+                <h4><i class="icon-ths-two"></i> 吹奏楽部定期演奏会 <a href="https://goo.gl/maps/rLbsEf3HRyE2" class="btn btn-link" target="_blank">@群馬音楽センター</a></h4>
+                <p class="pl-1 pl-md-3">
+                    <b>2017/03/28(火)</b><br>
+                    開場17:30 ・ 開演18:00<br>
+                    前売券 <b>￥300-</b> ・ 当日券 <b>￥500-</b>
+                </p>
+            </dd>
+        </dl>
+    </div>
+    <div class="dropdown-divider"></div>
+    <div class="container py-5">
+        <h2 class="keep-all">過去の翠巒祭<wbr>ホームページ</h2>
+        <p>
+            <a href="https://2016.suiranfes.com/index2.html" class="btn btn-primary m-2">2016年 第64回</a>
+            <a href="https://2015.suiranfes.com/index2.html" class="btn btn-primary m-2">2015年 第63回</a>
+            <a href="https://2014.suiranfes.com/index2.html" class="btn btn-primary m-2">2014年 第62回</a>
+        </p>
+    </div>
+    <div class="dropdown-divider"></div>
+    <p>群馬県立高崎高等学校 文化祭「翠巒祭」公式サイト</p>
 </div>
 </body>
 </html>
