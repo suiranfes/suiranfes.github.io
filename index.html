@@ -8,22 +8,94 @@
 <link rel="stylesheet" href="https://cdn.suiranfes.com/root/koishi/4.0.0-alpha.4/css/bootstrap.min.css">
 <link rel="preload" as="style" href="https://cdn.suiranfes.com/2017/icons/v1.1.1/thsicons.css" />
 <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <script type="text/javascript" src="https://cdn.suiranfes.com/2017/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.suiranfes.com/2017/tether/1.4.0/js/tether.min.js" async></script>
 <script type="text/javascript" src="https://cdn.suiranfes.com/root/koishi/4.0.0-alpha.4/js/bootstrap.min.js" async></script>
-<script>$('link[as = "style"]').attr('rel','stylesheet');</script>
+<script>
+    $('link[as = "style"]').attr('rel','stylesheet');
+    function suiranfes_top_img_chg(){
+        var ransu = Math.floor(Math.random()*11);
+        $('#headimgwrp img').fadeOut('slow').css('bottom','10%');
+        $('#headimg' + ransu).fadeIn('slow');
+        setTimeout("suiranfes_top_img_chg()",20000);
+    }
+
+    $(window).on('load',function(){
+        var html = "";
+        for(var i = 0; i < 30; i++){
+            html +=  "<img src='assets/img/top/" + i + ".jpg' alt='' id='headimg" + i + "'>";
+        }
+        $("#headimgwrp").html(html);
+        suiranfes_top_img_chg();
+    });
+</script>
 <style>
 
     #head {
-        min-height: 70vh;
-        width: 100vw;
-        background-color: #f0f0f0;
-        display: flex;
+        position: relative;
+        height: 70vh;
+        width: 100%;
         padding-top: auto;
     }
 
+    #headgo {
+        position: absolute;
+        top:0 ;
+        left: 0;
+        min-height: 70vh;
+        width: 100%;
+        display: flex;
+    }
+
     #headwrp {
+        width: 100%;
         margin: auto;
+        text-shadow: 0 0 4px #fff,0 0 3px #fff,0 0 3px #fff,0 0 3px #fff,0 0 2px rgba(255,255,255,0.2),0 0 1px #fff;
+    }
+
+    #headwrp .btn {
+        text-shadow: none;
+        white-space: initial;
+    }
+
+    #headimgwrp {
+        position: relative;
+        height: 70vh;
+        overflow: hidden;
+    }
+
+    #headimgwrp img {
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        left: 0;
+        animation: i_scroll 22s linear;
+        -moz-animation: i_scroll 22s linear;
+        -webkit-animation: i_scroll 22s linear;
+        -o-animation: i_scroll 22s linear;
+        -ms-animation: i_scroll 22s linear;
+    }
+
+    @keyframes i_scroll {
+        0% {bottom: -4%;}
+        100% {bottom: -100%;}
+    }
+    @-moz-keyframes i_scroll {
+        0% {bottom: -4%;}
+        100% {bottom: -100%;}
+    }
+    @-webkit-keyframes i_scroll {
+        0% {bottom: -4%;}
+        100% {bottom: -100%;}
+    }
+    @-o-keyframes i_scroll {
+        0% {bottom: -4%;}
+        100% {bottom: -100%;}
+    }
+    @-ms-keyframes i_scroll {
+        0% {bottom: -4%;}
+        100% {bottom: -100%;}
     }
 
     .text-bigger{
@@ -38,21 +110,36 @@
         word-break: keep-all;
     }
 
+    .no-list-style {
+        list-style-type: none;
+    }
 </style>
 
 </head>
 <body>
 
 <div id="head" class="text-center">
-    <div id="headwrp">
-        <h1><i class="icon-ths-takasakihs"></i> suiranfes.com</h1>
-        <p class="lead"><small>群馬県立高崎高等学校 文化祭</small><br>「翠巒祭」公式サイト</p>
-        <a href="https://2017.suiranfes.com/" class="btn btn-success">【最新】 2017年 第65回サイトへ</a>
+    <div id="headimgwrp"></div>
+    <div id="headgo" class="container">
+        <div id="headwrp">
+            <h1><i class="icon-ths-takasakihs"></i> suiranfes.com</h1>
+            <p class="lead"><small>群馬県立高崎高等学校 文化祭</small><br>「翠巒祭」公式サイト</p>
+            <a href="https://2017.suiranfes.com/" class="btn btn-danger btn-lg keep-all">【最新】 2017年 第65回サイトへ</a>
+        </div>
     </div>
 </div>
 
 <div class="container py-3">
-    <div class="container py-5">
+    <div class="py-5">
+        <h2 class="keep-all">更新情報</h2>
+        <ul>
+            <li>2017/03/28 <b>第58回吹奏楽部定期演奏会が無事開催されました。</b></li>
+            <li>2017/03/26 <b>開催年によらない総合的なページを開設しました。</b></li>
+        </ul>
+    </div>
+    <!--
+    <div class="dropdown-divider"></div>
+    <div class="py-5">
         <h2 class="keep-all">音楽系部活動 演奏会のご案内</h2>
         <dl class="pl-md-5">
             <dd class="py-2">
@@ -65,8 +152,9 @@
             </dd>
         </dl>
     </div>
+    -->
     <div class="dropdown-divider"></div>
-    <div class="container py-5">
+    <div class="py-5">
         <h2 class="keep-all">過去の翠巒祭<wbr>ホームページ</h2>
         <p>
             <a href="https://2016.suiranfes.com/index2.html" class="btn btn-primary m-2">2016年 第64回</a>
@@ -74,8 +162,10 @@
             <a href="https://2014.suiranfes.com/index2.html" class="btn btn-primary m-2">2014年 第62回</a>
         </p>
     </div>
-    <div class="dropdown-divider"></div>
-    <p>群馬県立高崎高等学校 文化祭「翠巒祭」公式サイト</p>
+</div>
+<div class="dropdown-divider"></div>
+<div class="container py-3">
+    <span>群馬県立高崎高等学校 文化祭「翠巒祭」公式サイト</span>
 </div>
 </body>
 </html>
