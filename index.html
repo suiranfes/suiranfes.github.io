@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <link rel="dns-prefetch" href="http://cdn.suiranfes.com/">
-<title>翠巒祭公式サイト</title>
+<title>翠巒祭総合サイト</title>
 <link rel="stylesheet" href="https://cdn.suiranfes.com/root/koishi/4.0.0-alpha.4/css/bootstrap.min.css">
 <link rel="preload" as="style" href="https://cdn.suiranfes.com/2017/icons/v1.1.1/thsicons.css" />
 <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
@@ -15,8 +15,8 @@
 <script>
     $('link[as = "style"]').attr('rel','stylesheet');
     function suiranfes_top_img_chg(){
-        var ransu = Math.floor(Math.random()*11);
-        $('#headimgwrp img').fadeOut('slow').css('bottom','10%');
+        var ransu = Math.floor(Math.random()*30);
+        $('#headimgwrp img').fadeOut('slow');
         $('#headimg' + ransu).fadeIn('slow');
         setTimeout("suiranfes_top_img_chg()",20000);
     }
@@ -24,7 +24,7 @@
     $(window).on('load',function(){
         var html = "";
         for(var i = 0; i < 30; i++){
-            html +=  "<img src='assets/img/top/" + i + ".jpg' alt='' id='headimg" + i + "'>";
+            html +=  "<img src='assets/img/top/" + i + ".jpg' alt='' id='headimg" + i + "' data-imgnum='" + i + "'>";
         }
         $("#headimgwrp").html(html);
         suiranfes_top_img_chg();
@@ -35,6 +35,7 @@
     #head {
         position: relative;
         height: 70vh;
+        min-height: 20rem;
         width: 100%;
         padding-top: auto;
     }
@@ -43,7 +44,8 @@
         position: absolute;
         top:0 ;
         left: 0;
-        min-height: 70vh;
+        height: 70vh;
+        min-height: 20rem;
         width: 100%;
         display: flex;
     }
@@ -62,40 +64,54 @@
     #headimgwrp {
         position: relative;
         height: 70vh;
+        min-height: 20rem;
         overflow: hidden;
     }
 
     #headimgwrp img {
         position: absolute;
-        min-height: 140vw;
+        min-height: 140vh;
         min-width: 100%;
-        left: 0;
-        animation: i_scroll 22s linear;
-        -moz-animation: i_scroll 22s linear;
-        -webkit-animation: i_scroll 22s linear;
-        -o-animation: i_scroll 22s linear;
-        -ms-animation: i_scroll 22s linear;
+        animation: i_scroll 22s linear infinite alternate;
+        -moz-animation: i_scroll 22s linear infinite alternate;
+        -webkit-animation: i_scroll 22s linear infinite alternate;
+        -o-animation: i_scroll 22s linear infinite alternate;
+        -ms-animation: i_scroll 22s linear infinite alternate;
+    }
+    
+    @media screen and (max-width: 1920px){
+        #headimgwrp img {
+            left: 50%;
+            margin-left: -960px;
+        }
+    }
+    @media screen and (min-width: 1920px){
+        #headimgwrp img {
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
     }
 
     @keyframes i_scroll {
-        0% {bottom: -4%;}
-        100% {bottom: -100%;}
+        0% {bottom: 0;}
+        100% {bottom: -70vh}
     }
     @-moz-keyframes i_scroll {
-        0% {bottom: -4%;}
-        100% {bottom: -100%;}
+        0% {bottom: 0;}
+        100% {bottom: -70vh}
     }
     @-webkit-keyframes i_scroll {
-        0% {bottom: -4%;}
-        100% {bottom: -100%;}
+        0% {bottom: 0;}
+        100% {bottom: -70vh}
     }
     @-o-keyframes i_scroll {
-        0% {bottom: -4%;}
-        100% {bottom: -100%;}
+        0% {bottom: 0;}
+        100% {bottom: -70vh}
     }
     @-ms-keyframes i_scroll {
-        0% {bottom: -4%;}
-        100% {bottom: -100%;}
+        0% {bottom: 0;}
+        100% {bottom: -70vh}
     }
 
     .text-bigger{
@@ -122,8 +138,9 @@
     <div id="headimgwrp"></div>
     <div id="headgo" class="container">
         <div id="headwrp">
-            <h1><i class="icon-ths-takasakihs"></i> suiranfes.com</h1>
-            <p class="lead"><small>群馬県立高崎高等学校 文化祭</small><br>「翠巒祭」公式サイト</p>
+            <h1 class="keep-all"><i class="icon-ths-takasakihs"></i> 翠巒祭 総合サイト</h1>
+            <p class="m-0">群馬県立高崎高等学校 文化祭</p>
+            <p class="lead">suiranfes.com</p>
             <a href="https://2017.suiranfes.com/" class="btn btn-danger btn-lg keep-all">【最新】 2017年 第65回サイトへ</a>
         </div>
     </div>
@@ -133,6 +150,7 @@
     <div class="py-5">
         <h2 class="keep-all">更新情報</h2>
         <ul>
+            <li>2017/03/29 <b>新聞部のミニプレスへのリンクを掲載しました。</b></li>
             <li>2017/03/28 <b>第58回吹奏楽部定期演奏会が無事開催されました。</b></li>
             <li>2017/03/26 <b>開催年によらない総合的なページを開設しました。</b></li>
         </ul>
@@ -156,16 +174,22 @@
     <div class="dropdown-divider"></div>
     <div class="py-5">
         <h2 class="keep-all">過去の翠巒祭<wbr>ホームページ</h2>
-        <p>
-            <a href="https://2016.suiranfes.com/index2.html" class="btn btn-primary m-2">2016年 第64回</a>
-            <a href="https://2015.suiranfes.com/index2.html" class="btn btn-primary m-2">2015年 第63回</a>
-            <a href="https://2014.suiranfes.com/index2.html" class="btn btn-primary m-2">2014年 第62回</a>
+        <p class="m-0">
+            <a href="https://2016.suiranfes.com/index2.html" class="btn btn-primary m-2">2016年 第64回</a><a href="https://2015.suiranfes.com/index2.html" class="btn btn-primary m-2">2015年 第63回</a><a href="https://2014.suiranfes.com/index2.html" class="btn btn-primary m-2">2014年 第62回</a>
+        </p>
+    </div>
+    <div class="dropdown-divider"></div>
+    <div class="py-5">
+        <h2 class="keep-all">新聞部 ミニプレス 翠巒祭特集</h2>
+        <p class="m-0">
+            <a href="http://www.takasaki-hs.gsn.ed.jp/seikatsu-minipress-140.html" class="btn btn-link m-2" target="_blank">第64回 ◆ 140号</a><a href="http://www.takasaki-hs.gsn.ed.jp/seikatsu-minipress-136.html" class="btn btn-link m-2" target="_blank">第63回 ◆ 136号</a>
         </p>
     </div>
 </div>
 <div class="dropdown-divider"></div>
 <div class="container py-3">
-    <span>群馬県立高崎高等学校 文化祭「翠巒祭」公式サイト</span>
+    <p class="mb-1">群馬県立高崎高等学校 文化祭「翠巒祭」公式サイト</p>
+    <p class="m-0"><a href="http://www.takasaki-hs.gsn.ed.jp/" class="btn btn-secondary" target="_blank">県立高崎高校HP</a></p>
 </div>
 </body>
 </html>
