@@ -24,17 +24,13 @@
     }
 
     $(function(){
-        var html = "";
         for(var i = 0; i < 30; i++){
-            html +=  "<div style='background-image:url(\"https://cdn.suiranfes.com/root/img/top/" + i + ".jpg\"' alt='' id='headimg" + i + "' data-imgnum='" + i + "' />";
+            $("#headimgwrp").append("<div style='background-image:url(\"https://cdn.suiranfes.com/root/img/top/" + i + ".jpg\"' alt='' id='headimg" + i + "' data-imgnum='" + i + "' />");
+            if( i != 0 ) $("#headimg" + i ).css('display', 'none');
         }
-        $("#headimgwrp").html(html);
     });
 
     $(window).on('load',function(){
-        for(var i = 1; i < 30; i++){
-            $("#headimg" + i ).css('display', 'none');
-        }
         setTimeout("suiranfes_top_img_chg()",20000);
     });
 </script>
