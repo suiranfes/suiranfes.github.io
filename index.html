@@ -17,16 +17,17 @@
 <script>
     $('link[as = "style"]').attr('rel','stylesheet');
     function suiranfes_top_img_chg(){
-        var ransu = Math.floor(Math.random()*30);
-        $('#headimgwrp div').fadeOut('slow');
+        var ransu = Math.floor(Math.random()*30),
+            past = $('#headimgwrp div:visible');
         $('#headimg' + ransu).fadeIn('slow');
+        $(past).fadeOut('slow');
         setTimeout("suiranfes_top_img_chg()",20000);
     }
 
     $(function(){
-        for(var i = 0; i < 30; i++){
+        for(var i = 1; i < 30; i++){
             $("#headimgwrp").append("<div style='background-image:url(\"https://cdn.suiranfes.com/root/img/top/" + i + ".jpg\"' alt='' id='headimg" + i + "' data-imgnum='" + i + "' />");
-            if( i != 0 ) $("#headimg" + i ).css('display', 'none');
+            $("#headimg" + i ).css('display', 'none');
         }
     });
 
