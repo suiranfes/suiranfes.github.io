@@ -7,3 +7,6 @@ RewriteEngine on
   AddType application/x-httpd-ea-php56 .php .php5 .phtml
 </IfModule>
 # php -- END cPanel-generated handler, do not edit
+
+Options +MultiViews
+MultiviewsMatch Handlers
