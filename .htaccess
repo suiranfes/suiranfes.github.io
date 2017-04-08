@@ -8,5 +8,17 @@ RewriteEngine on
 </IfModule>
 # php -- END cPanel-generated handler, do not edit
 
-Options +MultiViews
-MultiviewsMatch Handlers
+Allow from all
+Header set Strict-Transport-Security "max-age=315360000; includeSubDomains; preload"
+RewriteCond %{HTTP_HOST} ^suiranfes.com$
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*) https://suiranfes.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.suiranfes.com$
+RewriteCond %{HTTPS} on
+RewriteRule ^(.*) https://suiranfes.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.suiranfes.com$
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*) https://suiranfes.com/$1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
