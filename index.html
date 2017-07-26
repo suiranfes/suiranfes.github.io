@@ -8,14 +8,17 @@
 <title>翠巒祭ポータル</title>
 <meta name="description" content="県立高崎高校文化祭「翠巒祭」は毎年6月初旬の土日に開催されます。入場無料。2014年からの翠巒祭のページ、各SNSアカウントなどを掲載しています。" />
 <meta name="keywords" content="高高" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="stylesheet" href="https://fs.suiranfes.com/root/koishi/4.0.0-alpha.5/css/bootstrap.min.css" />
-<link rel="preload" as="style" href="https://fs.suiranfes.com/2017/icons/1.1.4/style.css" />
+<link rel="preload" as="style" href="https://fs.suiranfes.com/root/icons/1.1.5/style.css" />
 <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
 <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-<script type="text/javascript" src="https://fs.suiranfes.com/2017/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://fs.suiranfes.com/2017/tether/1.4.0/js/tether.min.js" async></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" async></script>
 <script type="text/javascript" src="https://fs.suiranfes.com/root/koishi/4.0.0-alpha.5/js/bootstrap.min.js" async></script>
 <script type="text/javascript" src="https://use.typekit.net/ods0yjz.js"></script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <meta property="og:title" content="翠巒祭ポータル" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://suiranfes.com" />
@@ -27,6 +30,13 @@
 <meta name="twitter:title" content="翠巒祭ポータル" />
 <meta name="twitter:description" content="県立高崎高校文化祭「翠巒祭」は毎年6月初旬の土日に開催されます。入場無料。2014年からの翠巒祭のページ、各SNSアカウントなどを掲載しています。" />
 <meta name="twitter:site" content="@suiranfes" />
+<script src="https://sdk.push7.jp/v2/p7sdk.js"></script>
+<script>
+p7.init("8e1eb5dca6354a31a475f6e85642b7de",{
+  mode:"native",
+  subscribe:"auto"
+});
+</script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 <script>
     $('link[as = "style"]').attr('rel','stylesheet');
@@ -145,6 +155,7 @@
     .no-list-style {
         list-style-type: none;
     }
+
 </style>
 
 </head>
@@ -157,68 +168,93 @@
             <h1 class="keep-all"><i class="icon-ths-takasakihs"></i>&thinsp;翠巒祭<wbr>ポータル</h1>
             <p class="m-0">群馬県立高崎高等学校 文化祭</p>
             <p class="lead">suiranfes.com</p>
-            <a href="https://2017.suiranfes.com/" class="btn btn-danger btn-lg keep-all">【最新】 2017年 第65回サイトへ</a>
+            <p>第65回翠巒祭は、6/3日、4日に開催され、閉幕しました。<br>次の第66回翠巒祭は、来年6月初旬開催の見込みです。</p>
         </div>
     </div>
 </div>
 
 <div class="container py-3">
-    <div class="py-2">
-        <h2 class="keep-all"><i class="icon-ths-otokogumi"></i>&thinsp;和太鼓部<wbr><small>十三代目</small>漢組</h2>
-        <p><b>定期演奏会の模様がYouTubeにて期間限定でアップされています！</b></p>
-        <div class="row">
-            <div class="col-12 col-lg-6 align-self-center">
-                <h4 class="keep-all">告知動画</h4>
-                <blockquote class="twitter-video" data-lang="ja"><p lang="ja" dir="ltr">【特報】 <a href="https://t.co/Kkbes1MjGh">pic.twitter.com/Kkbes1MjGh</a></p>&mdash; 高崎高校和太鼓部“漢組” (@otokogumi_13th) <a href="https://twitter.com/otokogumi_13th/status/853605916989505536">2017年4月16日</a></blockquote>
-                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <div class="col-12 col-lg-6">
-                <h4 class="keep-all">本編(全3部)</h4>
-                <div class="align-self-center embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLt8h-CQl82UUYT_5vPiaEDBCLTCU9UgIB" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
+    <div class="py-4" style="text-align: center;" id="seeyou">
+        <p><span style="font-size: 1.25rem; font-weight:700;">第65回翠巒祭は閉幕しました。</span></p>
+        <p>来場者数は12689人でした。ありがとうございました。</p>
+        <p>また来年お会いしましょう！</p>
     </div>
-    <div class="py-2">
+    <div class="py-2" id="attention">
         <div class="alert alert-warning" role="alert">
             <h4 class="alert-heading"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&thinsp;誤字多発中!</h4>
-            <p>正しい表記は<strong>「翠巒祭」</strong>ですが、高高生でも「翠嵐祭」などと誤表記した投稿が見られます。</p>
-            <p>実行委員としては正しい表記をお願いしております。</p>
-            <p class="mb-0">この機会にIMEに「すいらん → 翠巒」と単語登録しましょう。</p>
+            <p>正しい表記は<strong>「翠巒祭」</strong>です。</p>
+            <p>実行委員としては正しい表記をお願いしています。</p>
+            <p class="mb-0"><i>ぜひ、TwitterやInstagramにタグ<b> #翠巒祭 </b>をつけて、写真を投稿してください。</i></p>
+        </div>
+        <div class="alert alert-info" role="alert">
+            <h4 class="alert-heading"><i class="fa fa-info-circle" aria-hidden="true"></i>&thinsp;写真及び動画撮影について</h4>
+            <p>翠巒祭での写真及び動画の撮影は禁止<b>されていません。</b></p>
+            <p class="mb-0">他の来場者の方の迷惑になりませんよう、マナーを守って撮影・公開をお願いします。</p>
         </div>
     </div>
     <div class="pt-3 pb-5">
-        <h2 class="keep-all">更新情報</h2>
+        <h2 class="keep-all" id="history">更新履歴</h2>
         <ul>
+            <li>2017/07/17 <b>高崎高校マンドリン・オーケストラ 第50回定期演奏会が無事開催されました。</b></li>
+            <li>2017/07/09 <b>高崎高校合唱部 2017定期演奏会が無事開催されました。</b></li>
+            <li>2017/07/08 <b>定期演奏会の情報(2017合唱・50thギタマン)を掲載しました。</b></li>
+            <li>2017/06/04 <b>第65回翠巒祭が大盛況のうち閉幕となりました。</b></li>
             <li>2017/03/29 <b>新聞部のミニプレスへのリンクを掲載しました。</b></li>
             <li>2017/03/28 <b>第58回吹奏楽部定期演奏会が無事開催されました。</b></li>
             <li>2017/03/26 <b>開催年によらない総合的なページを開設しました。</b></li>
         </ul>
     </div>
-    <!--
     <div class="dropdown-divider"></div>
     <div class="py-5">
-        <h2 class="keep-all">音楽系部活動 演奏会のご案内</h2>
+        <!-- 高崎市文化会館 https://goo.gl/maps/PbEdEGPh69z
+             群馬音楽センター https://goo.gl/maps/rLbsEf3HRyE2 -->
+        
+        <h2 class="keep-all" id="tei_enn">音楽系部活動 演奏のご案内</h2>
+        <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="ja" dir="ltr">［イベント情報］<br><br>・第43回高崎祭り<br><br>8/5(土)   15:20〜15:45<br>音楽センター前広場にて<br>             <br>8/6(日)   17:15〜18:00<br>もてなし広場ステージにて<br><br>今年は両日とも演奏します。<br>ぜひお越しください！！</p>&mdash; 高崎高校和太鼓部“漢組” (@otokogumi_13th) <a href="https://twitter.com/otokogumi_13th/status/889692098248691712">July 25, 2017</a></blockquote>
+        <!--
         <dl class="pl-md-5">
             <dd class="py-2">
-                <h4><i class="icon-ths-two"></i> 吹奏楽部定期演奏会 <a href="https://goo.gl/maps/rLbsEf3HRyE2" class="btn btn-link" target="_blank">@群馬音楽センター</a></h4>
+                <h4><i class="icon-ths-chorus"></i> 高崎高校合唱部 2017定期演奏会 <a href="https://goo.gl/maps/PbEdEGPh69z" class="btn btn-link" target="_blank">@高崎市文化会館</a></h4>
                 <p class="pl-1 pl-md-3">
-                    <b>2017/03/28(火)</b><br>
-                    開場17:30 ・ 開演18:00<br>
-                    前売券 <b>￥300-</b> ・ 当日券 <b>￥500-</b>
+                    <b>2017/07/09(日)</b><br>
+                    開場13:00 ・ 開演13:30<br>
+                    曲目「無伴奏男声合唱組曲 あの日たち」他<br>
+                    当日券 <b>￥300-</b>
                 </p>
+                <a href="http://taka2gleeclub.blog.fc2.com/blog-entry-785.html" class="btn btn-warning pl-1 pl-md-3" target="_blank">合唱部 ブログ記事</a>
+            </dd>
+            <dd class="py-2">
+                <h4><i class="icon-ths-tmo"></i> 高崎高校マンドリン・オーケストラ 第50回定期演奏会 <a href="https://goo.gl/maps/rLbsEf3HRyE2" class="btn btn-link" target="_blank">@群馬音楽センター</a></h4>
+                <p class="pl-1 pl-md-3">
+                    <b>2017/07/17(月・祝[海の日])</b><br>
+                    開場13:30 ・ 開演14:00<br>
+                    当日券 <b>￥500-</b>
+                </p>
+                <h5 class="pl-1 pl-md-3">曲目</h5>
+                <ul class="pl-2 pl-md-5 ml-md-2">
+                    <li><b>幻想曲第1番</b> <br>久保田 孝 作曲</li>
+                    <li><b>劇楽「細川ガラシャ夫人」</b> <br>久保 静一 作曲</li>
+                    <li><b>トレピック プレリュード</b> <br>藤掛 廣幸 作曲</li>
+                    <li><b>車輪の唄</b> <br>藤原 基央 作曲 / 橋詰 歩武 編曲他</li>
+                </ul>
+                <h6 class="pl-2 pl-md-4">《 群馬交響楽団 首席奏者・秋葉美果 》</h6>
+                <ul class="pl-2 pl-md-5 ml-md-2">
+                    <li><b>アイネ・クライネ・ナハトムジーク ～第1楽章～</b> <br>W･A･モーツァルト 作曲 / 中屋 洋一 編曲</li>
+                    <li><b>大河ドラマ「真田丸」メインテーマ</b> <br>服部 隆之 作曲 / 中屋 洋一 編曲</li>
+                    <li><b>スペイン交響曲 ～第3楽章～</b> <br>W･A･E･ラロ 作曲 / 外所 聖貴 編曲</li>
+                </ul>
             </dd>
         </dl>
+        -->
     </div>
-    -->
     <div class="dropdown-divider"></div>
     <div class="py-5">
         <h2 class="keep-all">過去の翠巒祭<wbr>ホームページ</h2>
         <p class="m-0">
-            <a href="https://2016.suiranfes.com" class="btn btn-success m-2">2016年 第64回</a>
-            <a href="https://2015.suiranfes.com" class="btn btn-success m-2">2015年 第63回</a>
-            <a href="https://2014.suiranfes.com" class="btn btn-success m-2">2014年 第62回</a>
+            <a href="https://2017.suiranfes.com" class="btn btn-success m-2">2017年 第65回 "No SurFace"</a>
+            <a href="https://2016.suiranfes.com" class="btn btn-success m-2">2016年 第64回 "Plant&amp;Raise"</a>
+            <a href="https://2015.suiranfes.com" class="btn btn-success m-2">2015年 第63回 "Pieceful"</a>
+            <a href="https://2014.suiranfes.com" class="btn btn-success m-2">2014年 第62回 "No Limit!"</a>
         </p>
     </div>
     <div class="dropdown-divider"></div>
@@ -235,13 +271,14 @@
         <h3 class="keep-all"><i class="fa fa-twitter" aria-hidden="true"></i>&thinsp;Twitter</h3>
         <p class="m-0">
             <a href="https://twitter.com/suiranfes" class="btn btn-primary m-2" target="_blank"><i class="icon-ths-takasakihs"></i>&thinsp;翠巒祭@suiranfes</a>
-            <a href="https://twitter.com/takatakaglees" class="btn btn-primary m-2" target="_blank"><i class="icon-ths-chorus"></i>&thinsp;合唱部@takatakaglee</a>
+            <a href="https://twitter.com/takatakaglee" class="btn btn-primary m-2" target="_blank"><i class="icon-ths-chorus"></i>&thinsp;合唱部@takatakaglee</a>
             <a href="https://twitter.com/otokogumi_13th" class="btn btn-primary m-2" target="_blank"><i class="icon-ths-otokogumi"></i>&thinsp;和太鼓部@otokogumi_13th</a>
             <a href="https://twitter.com/takatakasuibu" class="btn btn-primary m-2" target="_blank"><i class="icon-ths-two"></i>&thinsp;吹奏楽部@takatakasuibu</a>
             <a href="https://twitter.com/Takataka_tmo" class="btn btn-primary m-2" target="_blank"><i class="icon-ths-tmo"></i>&thinsp;マンドリン部@Takataka_tmo</a>
             <a href="https://twitter.com/takasaki_tekken" class="btn btn-primary m-2" target="_blank"><i class="icon-ths-thsr"></i>&thinsp;鉄道研究部@takasaki_tekken</a>
             <a href="https://twitter.com/takataka_bungei" class="btn btn-primary m-2" target="_blank"><i class="icon-ths-bungei"></i>&thinsp;文藝部@takataka_bungei </a>
             <a href="https://twitter.com/ths_math65" class="btn btn-primary m-2" target="_blank">数学部@ths_math65</a>
+            <a href="https://twitter.com/suiranevent" class="btn btn-primary m-2" target="_blank">イベント班@suiranevent</a>
         </p>
         <p class="m-0">
             <a href="https://twitter.com/intent/tweet?url=https://suiranfes.com/" class="btn btn-secondary m-2" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>&thinsp;Share this page</a>

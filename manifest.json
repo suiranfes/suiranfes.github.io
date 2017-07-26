@@ -1,0 +1,13 @@
+{
+  "name": "高崎高校文化祭「翠巒祭」",
+  "short_name": "翠巒祭",
+  "icons": [
+    {"src": "favicon.png", "sizes": "128x128", "type": "image/vnd.microsoft.icon"},
+    {"src": "test144.png", "sizes": "144x144", "type": "image/png"},
+    {"src": "test809.png", "sizes": "809x809", "type": "image/png"}
+    ],
+  "display": "standalone",
+  "start_url": "/",
+  "gcm_sender_id": "781205625909",
+  "gcm_user_visible_only": true
+}
