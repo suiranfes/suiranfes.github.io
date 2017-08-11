@@ -1,9 +1,11 @@
 var cachepages = [
     "/",
     "/index",
-    "/index.html"
+    "/index.html",
+    "/bus",
+    "/bus.html"
 ];
-var version = '1.0.0';
+var version = '1.1.0';
 this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(version).then(function(cache) {
