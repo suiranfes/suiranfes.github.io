@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="dns-prefetch" href="http://fs.suiranfes.com/" />
-        <title>翠巒祭ポータル - 高崎市ぐるりんバスのご案内</title>
-        <meta name="description" content="県立高崎高校文化祭「翠巒祭」は毎年6月初旬の土日に開催されます。入場無料。2014年からの翠巒祭のページ、各SNSアカウントなどを掲載しています。" />
+        <title>翠巒祭ポータル - バスのご案内</title>
+        <meta name="description" content="高崎高校の最寄りは高崎駅ですが、徒歩で40分ほどかかります。このページでは、翠巒祭の無料シャトルバス、路線バス「ぐるりん」についてご案内します。" />
         <meta name="keywords" content="高高" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
         <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
@@ -19,21 +19,21 @@
         <script type="text/javascript" src="https://fs.suiranfes.com/root/koishi/4.0.0-alpha.5/js/bootstrap.min.js" async></script>
         <script type="text/javascript" src="https://use.typekit.net/ods0yjz.js"></script>
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <meta property="og:title" content="翠巒祭ポータル - 高崎市ぐるりんバスのご案内" />
+        <meta property="og:title" content="翠巒祭ポータル - バスのご案内" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://suiranfes.com" />
         <meta property="og:image" content="https://suiranfes.com/assets/img/TwitterCard.png" />
-        <meta property="og:site_name" content="翠巒祭ポータル - 高崎市ぐるりんバスのご案内" />
-        <meta property="og:description" content="県立高崎高校文化祭「翠巒祭」は毎年6月初旬の土日に開催されます。入場無料。2014年からの翠巒祭のページ、各SNSアカウントなどを掲載しています。" />
+        <meta property="og:site_name" content="翠巒祭ポータル - バスのご案内" />
+        <meta property="og:description" content="高崎高校の最寄りは高崎駅ですが、徒歩で40分ほどかかります。このページでは、翠巒祭の無料シャトルバス、路線バス「ぐるりん」についてご案内します。" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="https://suiranfes.com/assets/img/TwitterCard.png" />
-        <meta name="twitter:title" content="翠巒祭ポータル - 高崎市ぐるりんバスのご案内" />
-        <meta name="twitter:description" content="県立高崎高校文化祭「翠巒祭」は毎年6月初旬の土日に開催されます。入場無料。2014年からの翠巒祭のページ、各SNSアカウントなどを掲載しています。" />
+        <meta name="twitter:title" content="翠巒祭ポータル - バスのご案内" />
+        <meta name="twitter:description" content="高崎高校の最寄りは高崎駅ですが、徒歩で40分ほどかかります。このページでは、翠巒祭の無料シャトルバス、路線バス「ぐるりん」についてご案内します。" />
         <meta name="twitter:site" content="@suiranfes" />
         <!--
 
 
-                        翠巒祭ポータル - 高崎市ぐるりんバスのご案内 v1.1.0
+                        翠巒祭ポータル - バスのご案内 v1.2.0
 
                         GitHub Organization
                         https://github.com/suiranfes/
@@ -83,6 +83,20 @@
                 flex: 1;
             }
 
+            ul.ul-type-none{
+                list-style-type: none;
+                margin: 0 0 0 1.75em;
+                padding: 0;
+            }
+
+            ul.ul-type-none li{
+                margin-bottom: 0.75em
+            }
+
+            .table th,.table td{
+                padding: 0.1em
+            }
+
         </style>
 
     </head>
@@ -93,12 +107,71 @@
                     <h1 class="keep-all"><i class="icon-ths-takasakihs"></i>&thinsp;翠巒祭<wbr>ポータル</h1>
                     <p class="m-0">群馬県立高崎高等学校 文化祭</p>
                     <p class="lead">suiranfes.com</p>
-                    <a href="/" class="btn btn-success my-2">トップページへ戻る</a>
+                    <a href="/" class="btn btn-success my-2 btn-block">トップページへ戻る</a>
             </div>
-                    <h2><i class="fa fa-bus" aria-hidden="true"></i>&thinsp;バス</h2>
-                    <p>本数が限られていますが、 <a href="http://www.city.takasaki.gunma.jp/docs/2014022800027/" target="_blank">高崎市営バス「ぐるりん」</a>(通称ぐるりんバス)が利用可能です。</p>
+                    <h2 class="keep-all" id="sfes_shuttle"><i class="fa fa-bus" aria-hidden="true"></i>&thinsp;翠巒祭無料<wbr>シャトルバス</h2>
+                    <p>近年、翠巒祭では、来場者数増加に伴って、高崎駅至近の<b>市立南小学校</b>から高崎高校まで運賃無料のシャトルバスを運行しています。</p>
+                    <p>バスは<b>非常に混雑</b>致します。記載の事項や係員の指示に従って、<b>混雑の緩和にご協力ください。</b>
+                        <br>また、バス乗り場は、<b>大変分かりにくい位置</b>にございます。
+                        <br>お手数をおかけしますが、バスご利用の際は、<b>以下の乗り場案内に従って辿り着いて</b>ください。
+                        <br><b>現地でこの案内をご覧になる際は、周囲にお気をつけください。</b></p>
+                    <div class="my-5 mx-md-3">
+                        <h4>バスの時刻</h4>
+                        <ul class="ul-type-none">
+                            <li>翠巒祭無料シャトルバスの<b>時刻表の用意はございません。</b>おおむね<b>5～15分間隔で運行</b>しています。
+                                <br>バス乗り場の<b>待機列に並んで次のバスをお待ち下さい。</b><br><b>バスの待ち時間は、乗り場で係員に</b>お尋ねください。</li>
+                            <li>行きの<b>始発</b>の時刻は、<b>開場の20分前</b>です。</li>
+                            <li>帰りは、<b>午後4時30分までに、高高のバス乗り場にお並び</b>ください。</li>
+                        </ul>
+                    </div>
+                    <div class="my-5 mx-md-3">
+                        <h4>バスの乗り方</h4>
+                        <ul class="ul-type-none">
+                            <li>バス乗り場では、お客様を<b>係員が先着順に整列</b>しています。
+                                <br>待機列の長さによっては、ご乗車するバスが<b>1本以上後のバスになる可能性</b>がございますが、ご了承ください。
+                                <br>バスの<b>待ち時間</b>については、係員が<b>適宜ご案内</b>致します。どうぞお尋ねください。</li>
+                            <li>バスに乗車できるようになりましたら、<b>係員がバスへと誘導</b>致します。</li>
+                            <li>バスにご乗車になりましたら、奥の方からお座り下さい。観光型バスの場合、<b>補助席</b>をお使い下さい。</li>
+                            <li>目的地に到着しましたら、<b>忘れ物・落とし物を確認の上、</b>お降りください。</li>
+                        </ul>
+                    </div>
+                    <div class="my-5 mx-md-3">
+                        <h4>高崎駅から南小学校への行き方</h4>
+                        <ul class="ul-type-none">
+                            <li>高崎駅の<b>西口</b>へ進みます。</li>
+                            <li><b>1階への左手の階段は降りずに、</b>直進して2階の扉を出てください。</li>
+                            <li>オーパを背にして進み、ロータリーと<b>ウエストワンビル(駅の向かいのビル)を突っ切るペデストリアンデッキ</b>(高架歩道)を突き進みます。</li>
+                            <li><b>ラ・メルセ(ワシントンホテルプラザ)まで</b>行ったら、<b>ラ・メルセ内に階段</b>があるのでそれを<b>降りて</b>下さい(当日は<b>実行委員がおります</b>)。</li>
+                            <li>ラ・メルセの手前で大通りを越しますが、その際<b>左手にバス乗り場が確認できます。</b></li>
+                            <li>階段を降りたら、その方向へ進んで下さい。</li>
+                        </ul>
+                        <p>以上が<b>交差点を渡らない</b>公式的なルートではありますが、<b>階段がある</b>ためお身体の不自由な方はご利用できません。お身体の不自由な方は、<b>高崎モントレーまたは高崎OPAのエレベーター及びエスカレーター</b>をご利用ください。</p>
+                        <div class="embed-responsive embed-responsive-21by9 mb-3" style="max-width: 600px"><iframe class="embed-responsive-item" pre-src="https://www.google.com/maps/d/embed?mid=1CscodCPl3tv2PJmjJpYHqk4FWWE" allowfullscreen="" src="https://www.google.com/maps/d/embed?mid=1CscodCPl3tv2PJmjJpYHqk4FWWE"></iframe></div>
+                    </div>
+                    <div class="my-5 mx-md-3">
+                        <h4>高高バス乗り場のご案内</h4>
+                        <ul>
+                            <li><b>正門入口アーチの隣です。</b>校内から<b>出口に向かって右手</b>にあります。係員が看板を持っていますので、よく見てください。</li>
+                            <li>運動場と生け垣のに挟まれたスペースに待機列を作っています。</li>
+                        </ul>
+                    </div>
+                    <div class="my-5 mx-md-3">
+                        <h4>混雑時間帯</h4>
+                        <h5 class="ml-2 mt-2">行き(南小前)</h5>
+                        <ul>
+                            <li>始発</li>
+                            <li>午前11時～午後13時</li>
+                        </ul>
+                        <h5 class="ml-2 mt-2">帰り(高高)</h5>
+                        <ul>
+                            <li>午後3時～終バス</li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <h2 class="keep-all my-5" id="gururin"><i class="fa fa-bus" aria-hidden="true"></i>&thinsp;ぐるりんバス</h2>
+                    <p>本数が限られていますが、 <a href="http://www.city.takasaki.gunma.jp/docs/2014022800027/" target="_blank">高崎市内循環バス「ぐるりん」</a>(ぐるりんバス)が利用可能です。</p>
                     <div class="d-flex flex-wrap">
-                        <div class="m-2 flex-item-1">
+                        <div class="m-sm-2 flex-item-1">
                             <div>
                                 <h4>高崎駅から(行き)</h4>
                                 <table class="table table-bordered table-striped">
@@ -106,9 +179,6 @@
                                         <tr>
                                             <th>
                                                 系統
-                                            </th>
-                                            <th>
-                                                
                                             </th>
                                             <th>
                                                 高崎駅西口
@@ -128,8 +198,6 @@
                                         <tr>
                                             <td>
                                                 14
-                                            </td>
-                                            <td>
                                                 ※
                                             </td>
                                             <th>
@@ -149,9 +217,6 @@
                                             <td>
                                                 14
                                             </td>
-                                            <td>
-                                                
-                                            </td>
                                             <th>
                                                 7:50
                                             </th>
@@ -168,8 +233,6 @@
                                         <tr>
                                             <td>
                                                 1
-                                            </td>
-                                            <td>
                                                 ※
                                             </td>
                                             <th>
@@ -189,9 +252,6 @@
                                             <td>
                                                 14
                                             </td>
-                                            <td>
-                                                
-                                            </td>
                                             <th>
                                                 9:10
                                             </th>
@@ -208,9 +268,6 @@
                                         <tr>
                                             <td>
                                                 1
-                                            </td>
-                                            <td>
-                                                
                                             </td>
                                             <th>
                                                 9:20
@@ -229,9 +286,6 @@
                                             <td>
                                                 1
                                             </td>
-                                            <td>
-                                                
-                                            </td>
                                             <th>
                                                 10:17
                                             </th>
@@ -248,9 +302,6 @@
                                         <tr>
                                             <td>
                                                 14
-                                            </td>
-                                            <td>
-                                                
                                             </td>
                                             <th>
                                                 10:30
@@ -269,9 +320,6 @@
                                             <td>
                                                 1
                                             </td>
-                                            <td>
-                                                
-                                            </td>
                                             <th>
                                                 11:40
                                             </th>
@@ -288,9 +336,6 @@
                                         <tr>
                                             <td>
                                                 14
-                                            </td>
-                                            <td>
-                                                
                                             </td>
                                             <th>
                                                 11:50
@@ -309,9 +354,6 @@
                                             <td>
                                                 1
                                             </td>
-                                            <td>
-                                                
-                                            </td>
                                             <th>
                                                 13:20
                                             </th>
@@ -328,9 +370,6 @@
                                         <tr>
                                             <td>
                                                 14
-                                            </td>
-                                            <td>
-                                                
                                             </td>
                                             <th>
                                                 13:35
@@ -349,9 +388,6 @@
                                             <td>
                                                 14
                                             </td>
-                                            <td>
-                                                
-                                            </td>
                                             <th>
                                                 15:00
                                             </th>
@@ -368,9 +404,6 @@
                                         <tr>
                                             <td>
                                                 1
-                                            </td>
-                                            <td>
-                                                
                                             </td>
                                             <th>
                                                 15:30
@@ -389,9 +422,6 @@
                                             <td>
                                                 14
                                             </td>
-                                            <td>
-                                                
-                                            </td>
                                             <th>
                                                 16:20
                                             </th>
@@ -408,9 +438,6 @@
                                         <tr>
                                             <td>
                                                 1
-                                            </td>
-                                            <td>
-                                                
                                             </td>
                                             <th>
                                                 16:56
@@ -429,9 +456,6 @@
                                             <td>
                                                 14
                                             </td>
-                                            <td>
-                                                
-                                            </td>
                                             <th>
                                                 17:40
                                             </th>
@@ -449,9 +473,6 @@
                                             <td>
                                                 1
                                             </td>
-                                            <td>
-                                                
-                                            </td>
                                             <th>
                                                 18:26
                                             </th>
@@ -468,8 +489,6 @@
                                         <tr>
                                             <td>
                                                 14
-                                            </td>
-                                            <td>
                                                 ※
                                             </td>
                                             <th>
@@ -488,8 +507,6 @@
                                         <tr>
                                             <td>
                                                 1
-                                            </td>
-                                            <td>
                                                 ※
                                             </td>
                                             <th>
@@ -510,7 +527,7 @@
                             </div>
                         </div>
 
-                        <div class="m-2 flex-item-1">
+                        <div class="m-sm-2 flex-item-1">
                         <div>
                             <h4>高高から(帰り)</h4>
                         <table class="table table-bordered table-striped">
@@ -518,9 +535,6 @@
                                 <tr>
                                     <th>
                                         系統
-                                    </th>
-                                    <th>
-                                        
                                     </th>
                                     <th>
                                         高崎高校前
@@ -537,8 +551,6 @@
                                 <tr>
                                     <td>
                                         13
-                                    </td>
-                                    <td>
                                         ※
                                     </td>
                                     <td>
@@ -554,8 +566,6 @@
                                 <tr>
                                     <td>
                                         2
-                                    </td>
-                                    <td>
                                         ※
                                     </td>
                                     <th>
@@ -573,9 +583,6 @@
                                         13
                                     </td>
                                     <td>
-                                        
-                                    </td>
-                                    <td>
                                         徒歩
                                     </td>
                                     <th>
@@ -589,9 +596,6 @@
                                     <td>
                                         2
                                     </td>
-                                    <td>
-                                        
-                                    </td>
                                     <th>
                                         8:28
                                     </th>
@@ -604,10 +608,21 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        2
+                                        13
                                     </td>
                                     <td>
-                                        
+                                        徒歩
+                                    </td>
+                                    <th>
+                                        9:40
+                                    </th>
+                                    <td class="mymt-border-left">
+                                        9:59
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        2
                                     </td>
                                     <th>
                                         10:23
@@ -624,26 +639,6 @@
                                         13
                                     </td>
                                     <td>
-                                        
-                                    </td>
-                                    <td>
-                                        徒歩
-                                    </td>
-                                    <th>
-                                        9:40
-                                    </th>
-                                    <td class="mymt-border-left">
-                                        11:00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        13
-                                    </td>
-                                    <td>
-                                        
-                                    </td>
-                                    <td>
                                         徒歩
                                     </td>
                                     <th>
@@ -656,9 +651,6 @@
                                 <tr>
                                     <td>
                                         13
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                     <td>
                                         徒歩
@@ -674,9 +666,6 @@
                                     <td>
                                         2
                                     </td>
-                                    <td>
-                                        
-                                    </td>
                                     <th>
                                         12:44
                                     </th>
@@ -690,9 +679,6 @@
                                 <tr>
                                     <td>
                                         2
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                     <th>
                                         13:54
@@ -709,9 +695,6 @@
                                         13
                                     </td>
                                     <td>
-                                        
-                                    </td>
-                                    <td>
                                         徒歩
                                     </td>
                                     <th>
@@ -724,9 +707,6 @@
                                 <tr>
                                     <td>
                                         13
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                     <td>
                                         徒歩
@@ -742,9 +722,6 @@
                                     <td>
                                         2
                                     </td>
-                                    <td>
-                                        
-                                    </td>
                                     <th>
                                         15:54
                                     </th>
@@ -758,9 +735,6 @@
                                 <tr>
                                     <td>
                                         2
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                     <th>
                                         16:33
@@ -777,9 +751,6 @@
                                         13
                                     </td>
                                     <td>
-                                        
-                                    </td>
-                                    <td>
                                         徒歩
                                     </td>
                                     <th>
@@ -792,9 +763,6 @@
                                 <tr>
                                     <td>
                                         13
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                     <td>
                                         徒歩
@@ -810,9 +778,6 @@
                                     <td>
                                         2
                                     </td>
-                                    <td>
-                                        
-                                    </td>
                                     <th>
                                         18:38
                                     </th>
@@ -826,8 +791,6 @@
                                 <tr>
                                     <td>
                                         13
-                                    </td>
-                                    <td>
                                         ※
                                     </td>
                                     <td>
@@ -851,17 +814,15 @@
                             <h5 class="pt-2">系統</h5>
                             <p>1:「<ruby>少林山<rt>しょうりんざん</rt></ruby>線 <ruby>乗附<rt>のつけ</rt></ruby>先回り」 14:「<ruby>観音山<rt>かんのんやま</rt></ruby>線 <ruby>片岡<rt>かたおか</rt></ruby>先回り」</p>
                             <p>2:「<ruby>少林山<rt>しょうりんざん</rt></ruby>線 <ruby>豊岡<rt>とよおか</rt></ruby>先回り」 13:「<ruby>観音山<rt>かんのんやま</rt></ruby>線 <ruby>農二<rt>のうに</rt></ruby>先回り」</p>
-                                <div class="dropdown-divider"></div>
-                            <h5 class="pt-2">記号</h5>
+                            <h5 class="py-4">記号</h5>
                                 <p>※:土休日は運休</p>
                                 <p>全面運休日や市街地の催事等による経路び変更が時々ありますので、高崎市の告知をご確認ください。</p>
 
-                                <div class="dropdown-divider"></div>
-                            <h5 class="pt-2">備考・注</h5>
-                                <ul>
+                            <h5 class="py-4">備考・注</h5>
+                                <ul class="ul-type-none">
                                     <li>運賃は、<b>高崎駅-高崎高校間であれば</b>大人200円、子供100円です。</li>
                                     <li>高崎高校前バス停は、<b>車椅子に対応しておりません</b>。神田病院前バス停<i>(系統1,2,13,14)</i>か、間にある山田かまち美術館バス停<i>(系統1,2)</i>をご利用ください。</li>
-                                    <li>神田病院前バス停から高高までは、およそ徒歩10分です。</li>
+                                    <li>神田病院前バス停から高高までは、およそ徒歩10分です。また、高崎高校前バス停から高高までは、平均徒歩3秒です。※個人差があります。</li>
                                     <li>2016年4月1日改正の時刻表を抜粋して掲載しております。時刻は、予告なく変更される場合があります。また、ここに掲載されている情報の正確性は保証できません。</li>
                                     <li>路線や時刻等についてのお問合わせは、各委託運行会社までお願いします。少林山線(系統1,2)は<a href="http://www.gunbus.co.jp/" target="_blank">(株)群馬バス</a>、観音山線(系統13,14)は<a href="http://www.joshin-dentetsu.co.jp/" target="_blank">上信電鉄(株)</a>が高崎市から委託され運行しています。</li>
                                     <li>ぐるりんバスサービス全般についてのお問合わせは、<a href="https://www.city.takasaki.gunma.jp/" target="_blank">高崎市</a>までお願いします。</li>
