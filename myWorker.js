@@ -5,7 +5,7 @@ var cachepages = [
     "/bus",
     "/bus.html"
 ];
-var version = '2.1.1';
+var version = '2.1.2';
 this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(version).then(function(cache) {
